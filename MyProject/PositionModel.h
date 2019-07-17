@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface APIModel : NSObject
+@interface PositionModel : NSObject
 
 @property (nonatomic, retain) NSString *latitude;
 @property (nonatomic, retain) NSString *longitude;

@@ -9,7 +9,7 @@
 #import "MapViewController.h"
 #import <MapKit/MapKit.h>
 #import "QueryManager.h"
-#import "APIModel.h"
+#import "PositionModel.h"
 
 @interface MapViewController ()<MKMapViewDelegate>
 {
@@ -48,7 +48,7 @@
 
 - (void)fetchPosition
 {
-    [QueryManager getJSonResponse:^(APIModel* model) {
+    [QueryManager getPostion:^(PositionModel* model) {
         
         CLLocationCoordinate2D issPostion;
         issPostion.latitude = [model.latitude doubleValue];

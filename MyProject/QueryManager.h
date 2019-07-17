@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "APIModel.h"
+#import "PositionModel.h"
+#import "PassengerModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface QueryManager : NSObject
 
-+ (void)getJSonResponse:(void(^)(APIModel *))compBlock;
++ (void)getPostion:(void(^)(PositionModel *))compBlock;
++ (void)getPassengers:(void(^)(NSMutableArray<PassengerModel *> *))compBlock;
+
 @end
 
 NS_ASSUME_NONNULL_END

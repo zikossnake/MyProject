@@ -6,9 +6,9 @@
 //  Copyright © 2019 Hinteen. All rights reserved.
 //
 
-#import "APIModel.h"
+#import "PositionModel.h"
 
-@implementation APIModel
+@implementation PositionModel
 
 
 
