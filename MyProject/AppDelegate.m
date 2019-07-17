@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "MapViewController.h"
+#import "PassengerListController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,26 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    MapViewController *mapController = [[MapViewController alloc] init];
+    mapController.title = @"Live feed position";
+    mapController.tabBarItem.tag = 0;
+    UINavigationController *mapNavigator = [[UINavigationController alloc]
+                                            initWithRootViewController:mapController];
+    
+    PassengerListController *passController = [[PassengerListController alloc] init];
+    passController.title = @"Passengers list";
+    passController.tabBarItem.tag = 1;
+    UINavigationController *passNavigator = [[UINavigationController alloc]
+                                             initWithRootViewController:passController];
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    NSArray* controllers = [NSArray arrayWithObjects:mapNavigator, passNavigator, nil];
+    tabBarController.viewControllers = controllers;
+    // set rootViewController
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = tabBarController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
