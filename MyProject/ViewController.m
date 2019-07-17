@@ -7,8 +7,9 @@
 //
 
 #import "ViewController.h"
+#import "MapViewController.h"
 
-@interface ViewController ()
+@interface ViewController ()<UITabBarControllerDelegate>
 
 @end
 
@@ -17,6 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    
+    MapViewController *mapController = [[MapViewController alloc] init];
+    mapController.title = @"Live feed position";
+    UINavigationController *mapNavigator = [[UINavigationController alloc]
+                                             initWithRootViewController:mapController];
+        NSArray* controllers = [NSArray arrayWithObjects:mapNavigator, mapNavigator, mapNavigator, nil];
+    tabBarController.viewControllers = controllers;
+    [self.view addSubview:tabBarController.view];
+    
+    
+    
+    
 }
 
 

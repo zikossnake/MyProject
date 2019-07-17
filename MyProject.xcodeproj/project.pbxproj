@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30C1DEE522DF589200ECCE04 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C1DEE422DF589200ECCE04 /* MapViewController.m */; };
+		30C1DEE822DF5F3600ECCE04 /* QueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C1DEE722DF5F3600ECCE04 /* QueryManager.m */; };
+		30C1DEEB22DF699600ECCE04 /* APIModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 30C1DEEA22DF699600ECCE04 /* APIModel.m */; };
 		69FEFA2438638D756E97F670 /* Pods_MyProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06181AC0900695DADB48ED34 /* Pods_MyProject.framework */; };
 		B01B7C5D22DF1ADF00AF6A19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B01B7C5C22DF1ADF00AF6A19 /* AppDelegate.m */; };
 		B01B7C6022DF1ADF00AF6A19 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B01B7C5F22DF1ADF00AF6A19 /* ViewController.m */; };
@@ -18,6 +21,12 @@
 
 /* Begin PBXFileReference section */
 		06181AC0900695DADB48ED34 /* Pods_MyProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		30C1DEE322DF589200ECCE04 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		30C1DEE422DF589200ECCE04 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		30C1DEE622DF5F3600ECCE04 /* QueryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueryManager.h; sourceTree = "<group>"; };
+		30C1DEE722DF5F3600ECCE04 /* QueryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QueryManager.m; sourceTree = "<group>"; };
+		30C1DEE922DF699600ECCE04 /* APIModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIModel.h; sourceTree = "<group>"; };
+		30C1DEEA22DF699600ECCE04 /* APIModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = APIModel.m; sourceTree = "<group>"; };
 		59783B40C6FC602A9F53B8B7 /* Pods-MyProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyProject.release.xcconfig"; path = "Target Support Files/Pods-MyProject/Pods-MyProject.release.xcconfig"; sourceTree = "<group>"; };
 		B01B7C5822DF1ADF00AF6A19 /* MyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01B7C5B22DF1ADF00AF6A19 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -58,7 +67,6 @@
 				EE1E2BA5FD7FE72480603D0D /* Pods-MyProject.debug.xcconfig */,
 				59783B40C6FC602A9F53B8B7 /* Pods-MyProject.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,6 +95,12 @@
 				B01B7C5C22DF1ADF00AF6A19 /* AppDelegate.m */,
 				B01B7C5E22DF1ADF00AF6A19 /* ViewController.h */,
 				B01B7C5F22DF1ADF00AF6A19 /* ViewController.m */,
+				30C1DEE322DF589200ECCE04 /* MapViewController.h */,
+				30C1DEE422DF589200ECCE04 /* MapViewController.m */,
+				30C1DEE622DF5F3600ECCE04 /* QueryManager.h */,
+				30C1DEE722DF5F3600ECCE04 /* QueryManager.m */,
+				30C1DEE922DF699600ECCE04 /* APIModel.h */,
+				30C1DEEA22DF699600ECCE04 /* APIModel.m */,
 				B01B7C6122DF1ADF00AF6A19 /* Main.storyboard */,
 				B01B7C6422DF1AE200AF6A19 /* Assets.xcassets */,
 				B01B7C6622DF1AE200AF6A19 /* LaunchScreen.storyboard */,
@@ -210,9 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30C1DEE822DF5F3600ECCE04 /* QueryManager.m in Sources */,
 				B01B7C6022DF1ADF00AF6A19 /* ViewController.m in Sources */,
+				30C1DEEB22DF699600ECCE04 /* APIModel.m in Sources */,
 				B01B7C6B22DF1AE200AF6A19 /* main.m in Sources */,
 				B01B7C5D22DF1ADF00AF6A19 /* AppDelegate.m in Sources */,
+				30C1DEE522DF589200ECCE04 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
