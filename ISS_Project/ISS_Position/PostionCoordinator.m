@@ -19,9 +19,17 @@
 
 @implementation PostionCoordinator
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        mapController = [[MapController alloc] init];
+    }
+    return self;
+}
+
 - (UIViewController *) startMapView
 {
-    mapController = [[MapController alloc] init];
     return mapController;
 }
 

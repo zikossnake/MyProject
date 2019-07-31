@@ -13,7 +13,7 @@
 
 - (UITabBarController *) startTabBar
 {
-    PostionCoordinator *posCoordinator = [PostionCoordinator new];
+    PostionCoordinator *posCoordinator = [[PostionCoordinator alloc] init];
     UINavigationController *passNavigator = [[UINavigationController alloc]
                                              initWithRootViewController:[posCoordinator startMapView]];
     

@@ -13,6 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PostionCoordinator : NSObject
 
+- (instancetype)init;
+
 - (UIViewController *) startMapView;
 
 @end
