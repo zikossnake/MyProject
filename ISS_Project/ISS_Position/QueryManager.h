@@ -1,5 +1,5 @@
 //
-//  ProtocolManager.h
+//  QueryManager.h
 //  ISS_Project
 //
 //  Created by Hinteen on 2019/7/30.
@@ -10,7 +10,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ProtocolManager : NSObject
+@interface QueryManager : NSObject
+
+- (void) getQueryWithURL:(void(^)(NSDictionary *))compBlock andURL:(NSString *)url;
 
 @end
 

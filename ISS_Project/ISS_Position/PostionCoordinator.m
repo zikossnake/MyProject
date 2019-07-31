@@ -8,11 +8,14 @@
 
 #import "PostionCoordinator.h"
 #import "MapController.h"
-#import "ProtocolManager.h"
+#import "QueryManager.h"
+#import "PositionFormatter.h"
 
 @interface PostionCoordinator ()
 {
     MapController *mapController;
+    QueryManager *queryManager;
+    PositionFormatter *postionFormatter;
 }
 
 @end
@@ -24,13 +27,24 @@
     self = [super init];
     if (self) {
         mapController = [[MapController alloc] init];
+        queryManager = [[QueryManager alloc] init];
+        postionFormatter = [[PositionFormatter alloc] init];
     }
     return self;
 }
 
 - (UIViewController *) startMapView
 {
+    [NSTimer scheduledTimerWithTimeInterval:2.0f
+                                     target:self selector:@selector(refreshPosition) userInfo:nil repeats:YES];
     return mapController;
+}
+
+- (void)refreshPosition
+{
+    [queryManager getQueryWithURL:^(NSDictionary * response) {
+        [self->mapController updateISSPostion:[self->postionFormatter formatJsonResponse:response]];
+    } andURL:@"http://api.open-notify.org/iss-now.json"];
 }
 
 @end

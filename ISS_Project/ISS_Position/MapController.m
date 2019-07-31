@@ -7,7 +7,6 @@
 //
 
 #import "MapController.h"
-#import <MapKit/MapKit.h>
 
 @interface MapController ()<MKMapViewDelegate>
 {
@@ -38,6 +37,19 @@
     [mapView.topAnchor constraintEqualToAnchor:guide.topAnchor].active = YES;
     [mapView.bottomAnchor constraintEqualToAnchor:guide.bottomAnchor].active = YES;
     [self.view layoutIfNeeded];
+}
+
+- (void) updateISSPostion:(CLLocationCoordinate2D)issPosition
+{
+    MKPointAnnotation * issAnnotation = [[MKPointAnnotation alloc] init];
+    issAnnotation.title = @"ISS Position";
+    issAnnotation.coordinate = issPosition;
+    [self->mapView addAnnotation:issAnnotation];
+    
+    MKCoordinateRegion region = MKCoordinateRegionMake(issPosition, MKCoordinateSpanMake(50, 50));
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [self->mapView setRegion:region animated:YES];
+    });
 }
 
 /*

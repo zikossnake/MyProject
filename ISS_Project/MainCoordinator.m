@@ -9,11 +9,18 @@
 #import "MainCoordinator.h"
 #import "PostionCoordinator.h"
 
+@interface MainCoordinator ()
+{
+    PostionCoordinator *posCoordinator;
+}
+
+@end
+
 @implementation MainCoordinator
 
 - (UITabBarController *) startTabBar
 {
-    PostionCoordinator *posCoordinator = [[PostionCoordinator alloc] init];
+    posCoordinator = [[PostionCoordinator alloc] init];
     UINavigationController *passNavigator = [[UINavigationController alloc]
                                              initWithRootViewController:[posCoordinator startMapView]];
     

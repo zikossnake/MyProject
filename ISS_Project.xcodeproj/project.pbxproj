@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3038AF0122F1EDC70058BAEC /* PositionFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 3038AF0022F1EDC70058BAEC /* PositionFormatter.m */; };
 		B073EE3222EFE4A100880D96 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B073EE3122EFE4A100880D96 /* AppDelegate.m */; };
 		B073EE3522EFE4A100880D96 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B073EE3422EFE4A100880D96 /* ViewController.m */; };
 		B073EE3822EFE4A100880D96 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B073EE3622EFE4A100880D96 /* Main.storyboard */; };
@@ -16,10 +17,12 @@
 		B073EE4922EFE57600880D96 /* PostionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = B073EE4822EFE57600880D96 /* PostionCoordinator.m */; };
 		B073EE4C22EFE5A300880D96 /* MapController.m in Sources */ = {isa = PBXBuildFile; fileRef = B073EE4B22EFE5A300880D96 /* MapController.m */; };
 		B0ADE30822F00FD70020B41B /* MainCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ADE30722F00FD70020B41B /* MainCoordinator.m */; };
-		B0ADE30B22F01BE30020B41B /* ProtocolManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ADE30A22F01BE30020B41B /* ProtocolManager.m */; };
+		B0ADE30B22F01BE30020B41B /* QueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ADE30A22F01BE30020B41B /* QueryManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3038AEFF22F1EDC70058BAEC /* PositionFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PositionFormatter.h; sourceTree = "<group>"; };
+		3038AF0022F1EDC70058BAEC /* PositionFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PositionFormatter.m; sourceTree = "<group>"; };
 		B073EE2D22EFE4A100880D96 /* ISS_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISS_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B073EE3022EFE4A100880D96 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B073EE3122EFE4A100880D96 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,8 +39,8 @@
 		B073EE4B22EFE5A300880D96 /* MapController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapController.m; sourceTree = "<group>"; };
 		B0ADE30622F00FD70020B41B /* MainCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainCoordinator.h; sourceTree = "<group>"; };
 		B0ADE30722F00FD70020B41B /* MainCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCoordinator.m; sourceTree = "<group>"; };
-		B0ADE30922F01BE30020B41B /* ProtocolManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtocolManager.h; sourceTree = "<group>"; };
-		B0ADE30A22F01BE30020B41B /* ProtocolManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProtocolManager.m; sourceTree = "<group>"; };
+		B0ADE30922F01BE30020B41B /* QueryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueryManager.h; sourceTree = "<group>"; };
+		B0ADE30A22F01BE30020B41B /* QueryManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QueryManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +96,10 @@
 				B073EE4822EFE57600880D96 /* PostionCoordinator.m */,
 				B073EE4A22EFE5A300880D96 /* MapController.h */,
 				B073EE4B22EFE5A300880D96 /* MapController.m */,
-				B0ADE30922F01BE30020B41B /* ProtocolManager.h */,
-				B0ADE30A22F01BE30020B41B /* ProtocolManager.m */,
+				B0ADE30922F01BE30020B41B /* QueryManager.h */,
+				B0ADE30A22F01BE30020B41B /* QueryManager.m */,
+				3038AEFF22F1EDC70058BAEC /* PositionFormatter.h */,
+				3038AF0022F1EDC70058BAEC /* PositionFormatter.m */,
 			);
 			path = ISS_Position;
 			sourceTree = "<group>";
@@ -170,8 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0ADE30822F00FD70020B41B /* MainCoordinator.m in Sources */,
-				B0ADE30B22F01BE30020B41B /* ProtocolManager.m in Sources */,
+				B0ADE30B22F01BE30020B41B /* QueryManager.m in Sources */,
 				B073EE3522EFE4A100880D96 /* ViewController.m in Sources */,
+				3038AF0122F1EDC70058BAEC /* PositionFormatter.m in Sources */,
 				B073EE4022EFE4A100880D96 /* main.m in Sources */,
 				B073EE4C22EFE5A300880D96 /* MapController.m in Sources */,
 				B073EE3222EFE4A100880D96 /* AppDelegate.m in Sources */,
