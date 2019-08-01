@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MainCoordinator : NSObject
 
-- (UITabBarController *) startTabBar;
+- (UIViewController *) startTabBar;
 
 @end
 

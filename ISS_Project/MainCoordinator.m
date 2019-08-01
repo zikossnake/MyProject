@@ -13,7 +13,7 @@
 
 @implementation MainCoordinator
 
-- (UITabBarController *) startTabBar
+- (UIViewController *) startTabBar
 {
     PostionCoordinator *posCoordinator = [[PostionCoordinator alloc] init];
     UINavigationController *posNavigator = [[UINavigationController alloc]
