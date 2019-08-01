@@ -16,6 +16,9 @@
 		B073EE4022EFE4A100880D96 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B073EE3F22EFE4A100880D96 /* main.m */; };
 		B073EE4922EFE57600880D96 /* PostionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = B073EE4822EFE57600880D96 /* PostionCoordinator.m */; };
 		B073EE4C22EFE5A300880D96 /* MapController.m in Sources */ = {isa = PBXBuildFile; fileRef = B073EE4B22EFE5A300880D96 /* MapController.m */; };
+		B0995FC522F2E47A004703BA /* PassengersCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = B0995FC422F2E47A004703BA /* PassengersCoordinator.m */; };
+		B0995FC822F2E498004703BA /* PassengerListController.m in Sources */ = {isa = PBXBuildFile; fileRef = B0995FC722F2E498004703BA /* PassengerListController.m */; };
+		B0995FCB22F2E4AE004703BA /* PassengersFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = B0995FCA22F2E4AE004703BA /* PassengersFormatter.m */; };
 		B0ADE30822F00FD70020B41B /* MainCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ADE30722F00FD70020B41B /* MainCoordinator.m */; };
 		B0ADE30B22F01BE30020B41B /* QueryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B0ADE30A22F01BE30020B41B /* QueryManager.m */; };
 /* End PBXBuildFile section */
@@ -37,6 +40,12 @@
 		B073EE4822EFE57600880D96 /* PostionCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostionCoordinator.m; sourceTree = "<group>"; };
 		B073EE4A22EFE5A300880D96 /* MapController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapController.h; sourceTree = "<group>"; };
 		B073EE4B22EFE5A300880D96 /* MapController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapController.m; sourceTree = "<group>"; };
+		B0995FC322F2E47A004703BA /* PassengersCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassengersCoordinator.h; sourceTree = "<group>"; };
+		B0995FC422F2E47A004703BA /* PassengersCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassengersCoordinator.m; sourceTree = "<group>"; };
+		B0995FC622F2E498004703BA /* PassengerListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PassengerListController.h; sourceTree = "<group>"; };
+		B0995FC722F2E498004703BA /* PassengerListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PassengerListController.m; sourceTree = "<group>"; };
+		B0995FC922F2E4AE004703BA /* PassengersFormatter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassengersFormatter.h; sourceTree = "<group>"; };
+		B0995FCA22F2E4AE004703BA /* PassengersFormatter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassengersFormatter.m; sourceTree = "<group>"; };
 		B0ADE30622F00FD70020B41B /* MainCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainCoordinator.h; sourceTree = "<group>"; };
 		B0ADE30722F00FD70020B41B /* MainCoordinator.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainCoordinator.m; sourceTree = "<group>"; };
 		B0ADE30922F01BE30020B41B /* QueryManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QueryManager.h; sourceTree = "<group>"; };
@@ -57,6 +66,12 @@
 		B009B33222F2E39B00D2951A /* ISS Passengers */ = {
 			isa = PBXGroup;
 			children = (
+				B0995FC322F2E47A004703BA /* PassengersCoordinator.h */,
+				B0995FC422F2E47A004703BA /* PassengersCoordinator.m */,
+				B0995FC622F2E498004703BA /* PassengerListController.h */,
+				B0995FC722F2E498004703BA /* PassengerListController.m */,
+				B0995FC922F2E4AE004703BA /* PassengersFormatter.h */,
+				B0995FCA22F2E4AE004703BA /* PassengersFormatter.m */,
 			);
 			path = "ISS Passengers";
 			sourceTree = "<group>";
@@ -182,8 +197,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0995FC822F2E498004703BA /* PassengerListController.m in Sources */,
 				B0ADE30822F00FD70020B41B /* MainCoordinator.m in Sources */,
+				B0995FC522F2E47A004703BA /* PassengersCoordinator.m in Sources */,
 				B0ADE30B22F01BE30020B41B /* QueryManager.m in Sources */,
+				B0995FCB22F2E4AE004703BA /* PassengersFormatter.m in Sources */,
 				B073EE3522EFE4A100880D96 /* ViewController.m in Sources */,
 				3038AF0122F1EDC70058BAEC /* PositionFormatter.m in Sources */,
 				B073EE4022EFE4A100880D96 /* main.m in Sources */,

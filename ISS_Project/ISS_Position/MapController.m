@@ -41,12 +41,12 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
-    [_delegate startSendQuery];
+    [_delegate refreshQuery];
 }
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [_delegate stopSendQuery];
+    [_delegate stopRefreshQuery];
 }
 
 - (void)updateISSPostion:(CLLocationCoordinate2D)issPosition

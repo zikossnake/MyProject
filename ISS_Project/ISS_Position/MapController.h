@@ -13,8 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @protocol MapControllerDelegate <NSObject>
 
-- (void)startSendQuery;
-- (void)stopSendQuery;
+- (void)refreshQuery;
+- (void)stopRefreshQuery;
 
 @end
 

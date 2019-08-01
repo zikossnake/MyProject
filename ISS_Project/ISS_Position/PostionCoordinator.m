@@ -39,7 +39,6 @@
 
 - (UIViewController *) startMapView
 {
-    [self startSendQuery];
     return mapController;
 }
 
@@ -51,13 +50,13 @@
 }
 
 #pragma MapControllerDelegate
-- (void)startSendQuery
+- (void)refreshQuery
 {
     refresh = [NSTimer scheduledTimerWithTimeInterval:2.0f
                                      target:self selector:@selector(refreshPosition) userInfo:nil repeats:YES];
 }
 
-- (void)stopSendQuery
+- (void)stopRefreshQuery
 {
     [refresh invalidate];
     refresh = nil;

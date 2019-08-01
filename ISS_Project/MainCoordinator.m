@@ -8,24 +8,23 @@
 
 #import "MainCoordinator.h"
 #import "PostionCoordinator.h"
+#import "PassengersCoordinator.h"
 
-@interface MainCoordinator ()
-{
-    PostionCoordinator *posCoordinator;
-}
-
-@end
 
 @implementation MainCoordinator
 
 - (UITabBarController *) startTabBar
 {
-    posCoordinator = [[PostionCoordinator alloc] init];
-    UINavigationController *passNavigator = [[UINavigationController alloc]
+    PostionCoordinator *posCoordinator = [[PostionCoordinator alloc] init];
+    UINavigationController *posNavigator = [[UINavigationController alloc]
                                              initWithRootViewController:[posCoordinator startMapView]];
     
+    PassengersCoordinator *passCoordinator = [[PassengersCoordinator alloc] init];
+    UINavigationController *passNavigator = [[UINavigationController alloc]
+                                             initWithRootViewController:[passCoordinator startList]];
+    
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    NSArray* controllers = [NSArray arrayWithObjects:passNavigator, nil];
+    NSArray* controllers = [NSArray arrayWithObjects:posNavigator,passNavigator, nil];
     tabBarController.viewControllers = controllers;
     
     return tabBarController;
