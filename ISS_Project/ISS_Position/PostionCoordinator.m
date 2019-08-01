@@ -56,7 +56,7 @@
                                      target:self selector:@selector(refreshPosition) userInfo:nil repeats:YES];
 }
 
-- (void)stopSendQuery
+- (void)stopRefreshQuery
 {
     [refresh invalidate];
     refresh = nil;
