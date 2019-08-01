@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    MainCoordinator *coordinator = [MainCoordinator new];
+    MainCoordinator *coordinator = [[MainCoordinator alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [coordinator startTabBar];
     [self.window makeKeyAndVisible];

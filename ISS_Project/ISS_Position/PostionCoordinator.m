@@ -11,11 +11,13 @@
 #import "QueryManager.h"
 #import "PositionFormatter.h"
 
-@interface PostionCoordinator ()
+@interface PostionCoordinator () <MapControllerDelegate>
 {
     MapController *mapController;
     QueryManager *queryManager;
     PositionFormatter *postionFormatter;
+    
+    NSTimer *refresh;
 }
 
 @end
@@ -27,6 +29,8 @@
     self = [super init];
     if (self) {
         mapController = [[MapController alloc] init];
+        mapController.delegate = self;
+        
         queryManager = [[QueryManager alloc] init];
         postionFormatter = [[PositionFormatter alloc] init];
     }
@@ -35,8 +39,7 @@
 
 - (UIViewController *) startMapView
 {
-    [NSTimer scheduledTimerWithTimeInterval:2.0f
-                                     target:self selector:@selector(refreshPosition) userInfo:nil repeats:YES];
+    [self startSendQuery];
     return mapController;
 }
 
@@ -45,6 +48,19 @@
     [queryManager getQueryWithURL:^(NSDictionary * response) {
         [self->mapController updateISSPostion:[self->postionFormatter formatJsonResponse:response]];
     } andURL:@"http://api.open-notify.org/iss-now.json"];
+}
+
+#pragma MapControllerDelegate
+- (void)startSendQuery
+{
+    refresh = [NSTimer scheduledTimerWithTimeInterval:2.0f
+                                     target:self selector:@selector(refreshPosition) userInfo:nil repeats:YES];
+}
+
+- (void)stopSendQuery
+{
+    [refresh invalidate];
+    refresh = nil;
 }
 
 @end

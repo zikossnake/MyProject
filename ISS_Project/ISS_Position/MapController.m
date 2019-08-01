@@ -39,7 +39,17 @@
     [self.view layoutIfNeeded];
 }
 
-- (void) updateISSPostion:(CLLocationCoordinate2D)issPosition
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [_delegate startSendQuery];
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [_delegate stopSendQuery];
+}
+
+- (void)updateISSPostion:(CLLocationCoordinate2D)issPosition
 {
     MKPointAnnotation * issAnnotation = [[MKPointAnnotation alloc] init];
     issAnnotation.title = @"ISS Position";

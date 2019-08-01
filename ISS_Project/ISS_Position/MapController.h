@@ -11,9 +11,18 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@protocol MapControllerDelegate <NSObject>
+
+- (void)startSendQuery;
+- (void)stopSendQuery;
+
+@end
+
 @interface MapController : UIViewController
 
-- (void) updateISSPostion:(CLLocationCoordinate2D)issPosition;
+@property (nonatomic,assign) id<MapControllerDelegate> delegate;
+
+- (void)updateISSPostion:(CLLocationCoordinate2D)issPosition;
 
 @end
 

@@ -54,6 +54,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B009B33222F2E39B00D2951A /* ISS Passengers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "ISS Passengers";
+			sourceTree = "<group>";
+		};
 		B073EE2422EFE4A100880D96 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +85,9 @@
 				B0ADE30622F00FD70020B41B /* MainCoordinator.h */,
 				B0ADE30722F00FD70020B41B /* MainCoordinator.m */,
 				B073EE4622EFE53400880D96 /* ISS_Position */,
+				B009B33222F2E39B00D2951A /* ISS Passengers */,
+				B0ADE30922F01BE30020B41B /* QueryManager.h */,
+				B0ADE30A22F01BE30020B41B /* QueryManager.m */,
 				B073EE3622EFE4A100880D96 /* Main.storyboard */,
 				B073EE3922EFE4A100880D96 /* Assets.xcassets */,
 				B073EE3B22EFE4A100880D96 /* LaunchScreen.storyboard */,
@@ -96,8 +106,6 @@
 				B073EE4822EFE57600880D96 /* PostionCoordinator.m */,
 				B073EE4A22EFE5A300880D96 /* MapController.h */,
 				B073EE4B22EFE5A300880D96 /* MapController.m */,
-				B0ADE30922F01BE30020B41B /* QueryManager.h */,
-				B0ADE30A22F01BE30020B41B /* QueryManager.m */,
 				3038AEFF22F1EDC70058BAEC /* PositionFormatter.h */,
 				3038AF0022F1EDC70058BAEC /* PositionFormatter.m */,
 			);
