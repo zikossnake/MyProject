@@ -7,6 +7,8 @@
 //
 
 #import "MainCoordinator.h"
+#import "MapController.h"
+#import "PassengerListController.h"
 #import "PostionCoordinator.h"
 #import "PassengersCoordinator.h"
 
@@ -15,11 +17,13 @@
 
 - (UIViewController *) startTabBar
 {
-    PostionCoordinator *posCoordinator = [[PostionCoordinator alloc] init];
+    MapController *mapController = [[MapController alloc] init];
+    PostionCoordinator *posCoordinator = [[PostionCoordinator alloc] initWithController:mapController];
     UINavigationController *posNavigator = [[UINavigationController alloc]
                                              initWithRootViewController:[posCoordinator startMapView]];
     
-    PassengersCoordinator *passCoordinator = [[PassengersCoordinator alloc] init];
+    PostionCoordinator *passengerList = [[PostionCoordinator alloc] init];
+    PassengersCoordinator *passCoordinator = [[PassengersCoordinator alloc] initWithController:passengerList];
     UINavigationController *passNavigator = [[UINavigationController alloc]
                                              initWithRootViewController:[passCoordinator startList]];
     

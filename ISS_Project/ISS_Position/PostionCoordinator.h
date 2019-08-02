@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "MapController.h"
+#import "QueryManager.h"
+#import "PositionFormatter.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PostionCoordinator : NSObject
 
-- (instancetype)init;
+- (instancetype)initWithController:(MapController *)controller;
 
 - (UIViewController *) startMapView;
 

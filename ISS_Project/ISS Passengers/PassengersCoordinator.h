@@ -8,12 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "PassengerListController.h"
+#import "PassengersFormatter.h"
+#import "QueryManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface PassengersCoordinator : NSObject
 
-- (instancetype)init;
+- (instancetype)initWithController:(PassengerListController *)controller;
 
 - (UIViewController *)startList;
 

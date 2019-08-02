@@ -7,9 +7,6 @@
 //
 
 #import "PostionCoordinator.h"
-#import "MapController.h"
-#import "QueryManager.h"
-#import "PositionFormatter.h"
 
 @interface PostionCoordinator () <MapControllerDelegate>
 {
@@ -24,11 +21,11 @@
 
 @implementation PostionCoordinator
 
-- (instancetype)init
+- (instancetype)initWithController:(MapController *)controller
 {
     self = [super init];
     if (self) {
-        mapController = [[MapController alloc] init];
+        mapController = controller;
         mapController.delegate = self;
         
         queryManager = [[QueryManager alloc] init];

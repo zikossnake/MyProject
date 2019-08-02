@@ -7,9 +7,6 @@
 //
 
 #import "PassengersCoordinator.h"
-#import "PassengerListController.h"
-#import "PassengersFormatter.h"
-#import "QueryManager.h"
 
 @interface PassengersCoordinator () <PassengerListControllerDelegate>
 {
@@ -22,11 +19,11 @@
 
 @implementation PassengersCoordinator
 
-- (instancetype)init
+- (instancetype)initWithController:(PassengerListController *)controller
 {
     self = [super init];
     if (self) {
-        passengerList = [[PassengerListController alloc] init];
+        passengerList = controller;
         passengerList.delegate = self;
         
         passengerFormatter = [[PassengersFormatter alloc] init];
